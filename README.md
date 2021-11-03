@@ -1,8 +1,8 @@
 # Google Search Proxy
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-This project only for using to fetch the first 10 google search results.
-The project based on SpringBoot Web Application Frame.
+This project is only for use to fetch the first 10 google search results. 
+The project is based on SpringBoot Web Application Frame.
 
 ### How to start
 To start the appliation you can use following ways. 
