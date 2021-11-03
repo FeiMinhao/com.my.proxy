@@ -34,6 +34,9 @@ To start the docker container use
 docker run -itd --name <your-container-name> thefay/searchproxy -p <your-host-port>:4041 
 ```
 
+### 3. Start Test
+Using ``` mvn test ```
+
 ### How to use
 To test with the app is recommended to use postman. In the repo you can find a postman collection for direct import into postman. The search proxy API is secured under springboot oauth2 To call the API use first the Get Token request to fetch a token. Token will be automatically saved in postman env. Then Call the API Get Search Results
 
