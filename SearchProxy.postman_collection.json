@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "ac11a812-d271-4bcb-946a-ac9947021546",
+		"name": "SearchProxy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var responseIsOk = responseCode.code === 200;\r",
+							"\r",
+							"if (responseIsOk) {\r",
+							"    var jsonData = JSON.parse(responseBody);\r",
+							"    postman.setEnvironmentVariable(\"accessToken\", jsonData.access_token);\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://testClient1:testSecret1@localhost:{{port}}/oauth/token?scope=any&grant_type=client_credentials",
+					"protocol": "http",
+					"auth": {
+						"user": "testClient1",
+						"password": "testSecret1"
+					},
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "scope",
+							"value": "any"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Search Results",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"searchterm\": \"Bosch Gmbh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:{{port}}/searchproxy",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"searchproxy"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "port",
+			"value": "4041"
+		},
+		{
+			"key": "accessToken",
+			"value": "54003120-74a2-4e5b-9bb1-b41765b1c3c9"
+		}
+	]
+}
