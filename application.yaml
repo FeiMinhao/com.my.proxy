@@ -1,0 +1,13 @@
+server:
+  port: 4041
+
+search:
+  apikey: AIzaSyCVYDWuByqA23Vc4u4IgazVTb1Gi1w-OR0
+  engineId: 665a7741f783368fb
+
+
+security:
+  oauth2:
+    client:
+      client-id: testClient1
+      client-secret: testSecret1
