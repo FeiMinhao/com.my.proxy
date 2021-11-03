@@ -42,6 +42,7 @@ Then Call the API *Get Search Results*
 
 If everything success, then you should see like in the following screenshort.
 
+![image](https://user-images.githubusercontent.com/11611036/140194675-8abfd99c-b748-45b4-85e6-d7799fc85fb9.png)
 
 ### Implementation
 
