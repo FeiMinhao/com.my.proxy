@@ -35,12 +35,9 @@ docker run -itd --name <your-container-name> thefay/searchproxy -p <your-host-po
 ```
 
 ### How to use
-To test with the app is recommend to use postman. In the repo you can find a postman collection for direct import into postman.
-The search proxy API is secured under [springboot oauth2](https://spring.io/guides/tutorials/spring-boot-oauth2/)
-To call the API use first the *Get Token* request to fetch a token. Token will be automatically saved in postman env.
-Then Call the API *Get Search Results*
+To test with the app is recommended to use postman. In the repo you can find a postman collection for direct import into postman. The search proxy API is secured under springboot oauth2 To call the API use first the Get Token request to fetch a token. Token will be automatically saved in postman env. Then Call the API Get Search Results
 
-If everything success, then you should see like in the following screenshort.
+If everything success, then you should see as in the following screenshot.
 
 ![image](https://user-images.githubusercontent.com/11611036/140194675-8abfd99c-b748-45b4-85e6-d7799fc85fb9.png)
 
