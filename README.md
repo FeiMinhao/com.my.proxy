@@ -15,7 +15,7 @@ mvn package
 ```
 - Run command line to start the app
 ```sh
-java -jar searchproxy-0.0.1-SNAPSHOT.jar -Dspring.config.location=./application.properties
+java -jar target/searchproxy-0.0.1-SNAPSHOT.jar -Dspring.config.location=./application.properties
 ```
 
 #### 2. Start App with Docker
